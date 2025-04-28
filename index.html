@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>KRYB</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -21,22 +21,22 @@
         <i class="fa-solid fa-magnifying-glass"></i>
         <input type="text" name="" id="" placeholder="SØG" />
       </div>
-      <img src="./assets/images/logo_small_black.png" alt="" />
-      <nav>
-        <ul>
-          <li>FORSIDE</li>
-          <li>SHOP</li>
-          <li>FORHANDLERE</li>
-          <li>INSPIRATION</li>
-          <li>OM KRYB</li>
-          <li>KONTAKT</li>
-        </ul>
-        <p href="">
-          <i class="fa-solid fa-bag-shopping"></i>
-          (0)
-        </p>
-      </nav>
+      <img id="headerLogo" src="./assets/images/logo_small_black.png" alt="" />
     </header>
+    <nav>
+      <ul>
+        <li>FORSIDE</li>
+        <li>SHOP</li>
+        <li>FORHANDLERE</li>
+        <li>INSPIRATION</li>
+        <li>OM KRYB</li>
+        <li>KONTAKT</li>
+      </ul>
+      <a href="">
+        <i class="fa-solid fa-bag-shopping"></i>
+        (0)
+      </a>
+    </nav>
     <img src="./assets/images/background.jpg" id="hero" alt="" />
     <main>
       <section id="SHOP">
@@ -171,59 +171,81 @@
       </section>
       <hr />
       <section id="opskrifter">
+        <header><h2>OPSKRIFTER</h2></header>
         <ul id="recipe-grid">
           <li id="leftBtn"><i class="fa-solid fa-circle-chevron-left fa-2x"></i></li>
           <li>
-            <figure><img src="./assets/images/Instagram_01.jpg" alt="" /></figure>
+            <figure><img class="recipeImg" src="./assets/images/Instagram_01.jpg" alt="" /></figure>
           </li>
           <li>
-            <figure><img src="./assets/images/Instagram_02.jpg" alt="" /></figure>
+            <figure><img class="recipeImg" src="./assets/images/Instagram_02.jpg" alt="" /></figure>
           </li>
           <li>
-            <figure><img src="./assets/images/Instagram_03.jpg" alt="" /></figure>
+            <figure><img class="recipeImg" src="./assets/images/Instagram_03.jpg" alt="" /></figure>
           </li>
           <li id="rightBtn"><i class="fa-solid fa-circle-chevron-right fa-2x"></i></li>
         </ul>
       </section>
       <hr />
-      <section>
+      <section id="kontakt">
         <header>
           <h2>KONTAKT KRYB</h2>
         </header>
-        <p>
-          Velkommen til Supporten.
-          <strong>Krybs</strong>
-          kundeservice. Hos Kryb er vi altid glade for at tale med vores kunder. Faktisk så meget at vi ofte inviterer
-          på middag i vores byhave oppe på Ydre Nørrebro. Men hvis du ikke kan vente til næste gang vi inviterer, kan du
-          også ringe, skrive til os her på siden eller sende en mail. Vi sidder klar til at hjælpe dig på telefon
-          <strong>7026 0066</strong>
-          søndag til onsdag fra 9 til 18, og torsdag til fredag fra 9 til 17. Du kan skrive til os via chat søndag til
-          torsdag fra 9 til 22, og fredag og lørdag fra 9 til 17. Du kan skrive til os via chat søndag til torsdag fra 9
-          til 22, og fredag og lørdag fra 9 til 17. Du er også velkommen til at sende os en mail på
-          <strong>info@kryb.dk</strong>
-          , eller hjælpe os lidt på vej ved at udfylde kontaktformular her til højre - så vender vi tilbage til dig, så
-          snart vi kan. Vil du gerne sende et billede til os, så send det i en mail på
-          <strong>info@kryb.dk</strong>
-          .
-        </p>
-        <form action="">
-          <label for="navn">For- og efternavn:</label>
-          <input type="text" name="navn" />
-          <label for="email"></label>
-          <input type="text" name="email" />
-          <label for="besked">Besked</label>
-          <textarea name="besked" id=""></textarea>
-          <input type="submit" value="Send!" />
-        </form>
+        <article>
+          <div>
+            <p>
+              Velkommen til Snakken.
+              <strong>Krybs</strong>
+              kundeservice.
+            </p>
+            <p>
+              Hos Kryb er vi altid glade for at tale med vores kunder. Faktisk så meget at vi ofte inviterer på middag i
+              vores byhave oppe på Ydre Nørrebro. Men hvis du ikke kan vente til næste gang vi inviterer, kan du også
+              ringe, skrive til os her på siden eller sende en mail.
+            </p>
+            <p>
+              Vi sidder klar til at hjælpe dig på telefon
+              <strong>7026 0066</strong>
+              søndag til onsdag fra 9 til 18, og torsdag til fredag fra 9 til 17. Du kan skrive til os via chat søndag
+              til torsdag fra 9 til 22, og fredag og lørdag fra 9 til 17. Du kan skrive til os via chat søndag til
+              torsdag fra 9 til 22, og fredag og lørdag fra 9 til 17.
+            </p>
+            <p>
+              Du er også velkommen til at sende os en mail på
+              <strong>info@kryb.dk</strong>
+              , eller hjælpe os lidt på vej ved at udfylde kontaktformular her til højre - så vender vi tilbage til dig,
+              så snart vi kan.
+              <br />
+              Vil du gerne sende et billede til os, så send det i en mail på
+              <strong>info@kryb.dk</strong>
+              .
+            </p>
+          </div>
+          <form action="">
+            <label for="navn">For- og efternavn</label>
+            <input type="text" id="navn" name="navn" />
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" />
+            <label for="besked">Besked</label>
+            <textarea name="besked" id="textarea" rows="15  "></textarea>
+            <input type="submit" id="submit" value="Send!" />
+          </form>
+        </article>
       </section>
       <hr />
       <footer>
         <ul id="socials">
           <li>
-            <a href=""><i class="fa-brands fa-linkedin"></i></a>
-            <a href=""><i class="fa-brands fa-instagram"></i></a>
-            <a href=""><i class="fa-brands fa-square-facebook"></i></a>
-            <a href=""><i class="fa-brands fa-square-twitter"></i></a>
+            <a href="">
+              <i class="fa-brands fa-linkedin fa-2x"></i>
+            </a>
+          </li>
+          <a href=""><i class="fa-brands fa-instagram fa-2x"></i></a>
+          <li>
+            <a href=""><i class="fa-brands fa-square-facebook fa-2x"></i></a>
+          </li>
+          <li>
+            <a href=""><i class="fa-brands fa-square-twitter fa-2x"></i></a>
           </li>
         </ul>
         <img src="./assets/images/logo_small_black.png" alt="kryb logo" />

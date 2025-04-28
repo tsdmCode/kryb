@@ -1,3 +1,9 @@
+let pageOne = true;
+const navn = document.getElementById('navn');
+const email = document.getElementById('email');
+const submitBtn = document.getElementById('submit');
+const leftArrow = document.getElementById('leftBtn');
+const rightArrow = document.getElementById('rightBtn');
 const recipeArray = [
   {
     src: './assets/images/instagram_01.jpg',
@@ -30,3 +36,62 @@ const recipeArray = [
     recipe: '6BLABLALBLABLALBALBLABLA JAJAJAJAJAJAJAJ',
   },
 ];
+
+function validateName(navn) {
+  const str = navn.value;
+  const regex = /^[a-z ,.'-]+$/i;
+  return str.length > 5 && regex.test(str);
+}
+function validateEmail(email) {
+  const str = email.value;
+  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  return regex.test(str);
+}
+
+function submit(e) {
+  e.preventDefault();
+
+  const isEmailValid = validateEmail(email);
+  const isNameValid = validateName(navn);
+
+  if (isEmailValid && isNameValid) {
+    alert('Thank you!');
+  } else if (!isEmailValid && !isNameValid) {
+    alert('Navn og email er forkert');
+  } else if (!isEmailValid && isNameValid) {
+    alert('Email er forkert');
+  } else {
+    alert('Navn er forkert!');
+  }
+}
+function swap() {
+  const images = document.getElementsByClassName('recipeImg');
+  if (pageOne) {
+    images[0].src = recipeArray[3].src;
+    images[0].alt = recipeArray[3].alt;
+
+    images[1].src = recipeArray[4].src;
+    images[1].alt = recipeArray[4].alt;
+
+    images[2].src = recipeArray[5].src;
+    images[2].alt = recipeArray[5].alt;
+
+    pageOne = !pageOne;
+  } else {
+    images[0].src = recipeArray[0].src;
+    images[0].alt = recipeArray[0].alt;
+
+    images[1].src = recipeArray[1].src;
+    images[1].alt = recipeArray[1].alt;
+
+    images[2].src = recipeArray[2].src;
+    images[2].alt = recipeArray[2].alt;
+
+    pageOne = !pageOne;
+  }
+}
+
+leftArrow.addEventListener('click', swap);
+rightArrow.addEventListener('click', swap);
+submitBtn.addEventListener('click', submit);
