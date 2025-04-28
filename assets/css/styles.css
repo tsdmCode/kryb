@@ -1,0 +1,115 @@
+body {
+  font-family: 'Poppins';
+  margin: 0.5rem;
+}
+header > h2 {
+  text-align: center;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+span {
+  font-weight: bold;
+}
+/* #region header */
+#header-main {
+  background-color: lightgray;
+  position: relative;
+  padding-top: 1rem;
+  margin-bottom: 0;
+}
+#header-main img {
+  margin-left: 10%;
+}
+#header-main div {
+  display: inline;
+  background-color: white;
+  height: 1rem;
+  margin-bottom: 25%;
+  width: 50%;
+  padding: 10px;
+}
+#header-main div input {
+  border: none;
+  height: 1rem;
+  margin-left: 0rem;
+}
+#header-main div input:focus {
+  outline: none;
+}
+/* #endregion  */
+/* #region nav */
+nav {
+  padding-top: 1.5rem;
+  margin-top: 0;
+  background-color: lightgray;
+  display: flex;
+  justify-content: space-between;
+}
+nav ul {
+  display: flex;
+  gap: 2rem;
+  margin-left: 0.5rem;
+}
+
+nav ul li:hover {
+  color: white;
+  cursor: pointer;
+}
+/* #endregion  */
+
+/* #region hero  */
+
+#hero {
+  width: 100%;
+  max-width: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+/* #endregion  */
+
+/* #region products  */
+#product-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+}
+
+#product-grid figure figcaption button {
+  border: none;
+  padding: 0.5rem;
+  width: 80%;
+}
+#product-grid figure figcaption button:hover {
+  color: gray;
+  background-color: black;
+}
+/* #endregion */
+
+/* #region about  */
+
+#about figure {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: auto;
+  width: 50%;
+  gap: 0.5rem;
+  font-size: 12px;
+}
+
+#about figure figcaption p:first-of-type {
+  font-size: 16px;
+}
+
+/* #endregion  */
+
+/* #region recipes  */
+#recipe-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* #endregion */
