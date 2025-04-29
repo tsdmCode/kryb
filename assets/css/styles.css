@@ -8,6 +8,9 @@ a {
 header > h2 {
   text-align: center;
 }
+h2 {
+  font-size: 2rem;
+}
 ul {
   padding: 0;
   margin: 0;
@@ -26,6 +29,9 @@ textarea:focus {
 }
 i {
   color: black;
+}
+li i {
+  color: lightgray;
 }
 /* #region header */
 #header-main {
@@ -74,7 +80,9 @@ nav ul {
   gap: 2rem;
   margin-left: 0.5rem;
 }
-
+nav a {
+  margin: 0rem 0.5rem 0.5rem 0.5rem;
+}
 nav ul li:hover {
   color: white;
   cursor: pointer;
@@ -102,10 +110,10 @@ nav ul li:hover {
 #product-grid figure figcaption button {
   border: none;
   padding: 0.5rem;
-  width: 80%;
+  width: 40%;
 }
 #product-grid figure figcaption button:hover {
-  color: gray;
+  color: lightgray;
   background-color: black;
 }
 /* #endregion */
@@ -123,6 +131,7 @@ nav ul li:hover {
 
 #about figure figcaption p:first-of-type {
   font-size: 16px;
+  margin-top: 0;
 }
 
 /* #endregion  */
@@ -135,9 +144,15 @@ nav ul li:hover {
   height: 200px;
   overflow: hidden;
 }
+
 #recipe-grid li {
-  position: relative; /* Ensure the pseudo-element is positioned relative to the image */
-  overflow: hidden; /* Prevent the pseudo-element from overflowing */
+  position: relative;
+  overflow: hidden;
+}
+
+#recipe-grid li figure {
+  position: relative;
+  height: 100%;
 }
 
 #recipe-grid li .recipeImg {
@@ -146,24 +161,26 @@ nav ul li:hover {
   height: auto;
 }
 
-#recipe-grid li::after {
-  content: 'Recipe Text'; /* Replace with dynamic text if needed */
+#recipe-grid li figure::after {
+  content: attr(data-recipe);
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 33%; /* Cover the bottom third of the image */
-  background: rgba(0, 0, 0, 0.5); /* Transparent black background */
+  height: 33%;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  background: rgba(0, 0, 0, 0.7);
   color: white;
   display: flex;
-  align-items: center;
-  justify-content: center;
   font-size: 1rem;
-  transition: all 0.3s ease-in-out; /* Smooth transition for hover effect */
+  transition: height 0.3s ease-in-out;
+  overflow: hidden;
+  pointer-events: none;
 }
 
-#recipe-grid li:hover::after {
-  height: 100%; /* Extend to cover the whole image on hover */
+#recipe-grid li figure:hover::after {
+  height: 87%;
 }
 #leftBtn:hover,
 #rightBtn:hover {
@@ -200,6 +217,9 @@ input[type='submit'] {
   padding: 0.2rem 0.5rem;
   background-color: white;
 }
+input[type='submit']:hover {
+  cursor: pointer;
+}
 
 /* #endregion */
 
@@ -226,12 +246,14 @@ footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   justify-content: space-between;
-  text-align: justify;
+  padding-bottom: 2rem;
+  gap: 2rem;
 }
-
 /* #endregion */
 
 /* #region queries  */
+
+/* #region mobile  */
 
 @media (max-width: 768px) {
   #hero {
@@ -251,20 +273,55 @@ footer {
     grid-template-columns: 1fr;
   }
   #about figure {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     margin: auto;
+    width: 50%;
   }
   #recipe-grid {
     flex-direction: column;
     height: auto;
+    width: 100%;
+  }
+  #recipe-grid li figure:hover::after {
+    height: 100%;
+  }
+  #leftBtn,
+  #rightBtn {
+    transform: rotate(90deg);
   }
   #kontakt article {
     display: grid;
     grid-template-columns: 1fr;
   }
   #footer-list {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
   }
 }
+
+/* #endregion */
+
+/* #region Tablet */
+@media (min-width: 769px) and (max-width: 1320px) {
+  nav {
+    justify-content: flex-end;
+  }
+  #product-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  #about figure {
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+  }
+  #recipe-grid li figure:hover::after {
+    height: 90%;
+  }
+  #kontakt article {
+    width: 100%;
+  }
+}
+/* #endregion  */
+/* #endregion */
