@@ -19,7 +19,7 @@
     <header id="header-main">
       <div>
         <i class="fa-solid fa-magnifying-glass"></i>
-        <input type="text" name="" id="" placeholder="SØG" />
+        <input type="search" name="" id="" placeholder="SØG" />
       </div>
       <img id="headerLogo" src="./assets/images/logo_small_black.png" alt="" />
     </header>
@@ -34,7 +34,7 @@
       </ul>
       <a href="">
         <i class="fa-solid fa-bag-shopping"></i>
-        (0)
+        <span id="shoppingcart">(0)</span>
       </a>
     </nav>
     <img src="./assets/images/background.jpg" id="hero" alt="" />
@@ -53,7 +53,7 @@
 
                 <p><b>49,95/stk</b></p>
 
-                <button>LÆG I KURV</button>
+                <button class="buyBtn">LÆG I KURV</button>
               </figcaption>
             </figure>
           </li>
@@ -66,7 +66,7 @@
 
                 <p><b>19,95/stk</b></p>
 
-                <button>LÆG I KURV</button>
+                <button class="buyBtn">LÆG I KURV</button>
               </figcaption>
             </figure>
           </li>
@@ -79,7 +79,7 @@
 
                 <p><b>49,95/stk</b></p>
 
-                <button>LÆG I KURV</button>
+                <button class="buyBtn">LÆG I KURV</button>
               </figcaption>
             </figure>
           </li>
@@ -92,7 +92,7 @@
 
                 <p><b>39,95/stk</b></p>
 
-                <button>LÆG I KURV</button>
+                <button class="buyBtn">LÆG I KURV</button>
               </figcaption>
             </figure>
           </li>
@@ -105,7 +105,7 @@
                 <bold>
                   <p><b>29,95/stk</b></p>
                 </bold>
-                <button>LÆG I KURV</button>
+                <button class="buyBtn">LÆG I KURV</button>
               </figcaption>
             </figure>
           </li>
@@ -118,7 +118,7 @@
                 <bold>
                   <p><b>39,95/stk</b></p>
                 </bold>
-                <button>LÆG I KURV</button>
+                <button class="buyBtn">LÆG I KURV</button>
               </figcaption>
             </figure>
           </li>
@@ -165,7 +165,6 @@
               . Læs mere om KRYB her >>>
             </p>
           </figcaption>
-
           <img src="./assets/images/restaurant.jpg" alt="" />
         </figure>
       </section>
@@ -256,36 +255,48 @@
         </ul>
         <img src="./assets/images/logo_small_black.png" alt="kryb logo" />
         <ul id="footer-list">
-          <ul>
-            <h3>Om KRYB</h3>
-            <li>Historien</li>
-            <li>Virksomheder og afdelinger</li>
-            <li>Job</li>
-            <li>CSR</li>
-            <li>Danmark mod Madspild</li>
-            <li>Foreign Suppliers</li>
-          </ul>
-          <ul>
-            <h3>INSPIRATION</h3>
-            <li>Vin & Mad</li>
-            <li>Opskrifter</li>
-            <li>Sociale Medier</li>
-            <li>Gaver Privat</li>
-          </ul>
-          <ul>
-            <h3>OM HANDEL</h3>
-            <li>Handelsbetingelser</li>
-            <li>Beskyttelse af personlige oplysninger</li>
-            <li>Levering</li>
-            <li>Fødevarestyrelsens smiley-rapporter</li>
-          </ul>
-          <ul>
-            <h3>KONTAKT</h3>
-            <li>Telefon (+45) 12345678</li>
-            <li></li>
-            <br />
-            <li>Butikker/Åbningstider</li>
-          </ul>
+          <li>
+            <ul>
+              <h3>Om KRYB</h3>
+              <li>Historien</li>
+              <li>Virksomheder og afdelinger</li>
+              <li>Job</li>
+              <li>CSR</li>
+              <li>Danmark mod Madspild</li>
+              <li>Foreign Suppliers</li>
+            </ul>
+          </li>
+          <li>
+            <ul>
+              <h3>INSPIRATION</h3>
+              <li>Vin & Mad</li>
+              <li>Opskrifter</li>
+              <li>Sociale Medier</li>
+              <li>Gaver Privat</li>
+            </ul>
+          </li>
+          <li>
+            <ul>
+              <li>
+                <h3>OM HANDEL</h3>
+              </li>
+              <li>Handelsbetingelser</li>
+              <li>Beskyttelse af personlige oplysninger</li>
+              <li>Levering</li>
+              <li>Fødevarestyrelsens smiley-rapporter</li>
+            </ul>
+          </li>
+          <li>
+            <ul>
+              <li>
+                <h3>KONTAKT</h3>
+              </li>
+              <li>Telefon (+45) 12345678</li>
+              <li></li>
+              <br />
+              <li>Butikker/Åbningstider</li>
+            </ul>
+          </li>
         </ul>
       </footer>
     </main>

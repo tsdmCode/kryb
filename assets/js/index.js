@@ -1,9 +1,20 @@
-let pageOne = true;
+const cart = document.getElementById('shoppingcart');
 const navn = document.getElementById('navn');
 const email = document.getElementById('email');
+const buyBtn = document.querySelectorAll('.buyBtn');
 const submitBtn = document.getElementById('submit');
 const leftArrow = document.getElementById('leftBtn');
 const rightArrow = document.getElementById('rightBtn');
+
+let pageOne = true;
+let count = 0;
+
+buyBtn.forEach((el) => {
+  el.addEventListener('click', () => {
+    count++;
+    cart.innerText = `(${count})`;
+  });
+});
 
 const recipeArray = [
   {
