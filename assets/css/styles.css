@@ -1,16 +1,27 @@
 /* #region globals */
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Poppins';
-  margin: 0.5rem;
+  margin-top: 0rem;
 }
 
 section {
   margin-bottom: 1rem;
 }
 
+figure,
+article {
+  margin-left: 0rem;
+  margin-right: 0rem;
+}
+
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 hr {
@@ -50,7 +61,7 @@ i {
 }
 
 li i {
-  color: lightgray;
+  color: #e3e3e3;
 }
 
 /* #endregion */
@@ -58,7 +69,7 @@ li i {
 /* #region header */
 
 #header-main {
-  background-color: lightgray;
+  background-color: #e3e3e3;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -80,14 +91,13 @@ li i {
   bottom: 0rem;
   background-color: white;
   padding: 10px;
-  text-align: center;
-  width: auto;
+  width: 30%;
 }
 
 #header-main div input {
   border: none;
   height: 1rem;
-  margin-left: 0rem;
+  width: 50%;
 }
 
 #header-main div input:focus {
@@ -99,9 +109,13 @@ li i {
 /* #region nav */
 
 nav {
-  padding-top: 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  padding-top: 0.5rem;
   margin-top: 0;
-  background-color: lightgray;
+  background-color: #e3e3e3;
+  color: inherit;
   display: flex;
   justify-content: space-between;
 }
@@ -113,12 +127,16 @@ nav ul {
 }
 
 nav a {
-  margin: 0rem 0.5rem 0.5rem 0.5rem;
+  color: inherit;
 }
 
 nav ul li:hover {
   color: white;
   cursor: pointer;
+}
+
+nav > a {
+  margin: 0rem 0.5rem 0.5rem 0.5rem;
 }
 
 /* #endregion  */
@@ -138,6 +156,9 @@ nav ul li:hover {
 #product-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 25%;
+  row-gap: 2rem;
+  width: 100%;
   text-align: center;
 }
 
@@ -148,7 +169,7 @@ nav ul li:hover {
 }
 
 #product-grid figure figcaption button:hover {
-  color: lightgray;
+  color: #e3e3e3;
   background-color: black;
 }
 
@@ -173,6 +194,11 @@ nav ul li:hover {
 /* #endregion  */
 
 /* #region recipes  */
+
+#opskrifter i:hover {
+  color: black;
+  cursor: pointer;
+}
 
 #recipe-grid {
   display: flex;
@@ -216,11 +242,6 @@ nav ul li:hover {
   height: 87%;
 }
 
-#leftBtn:hover,
-#rightBtn:hover {
-  cursor: pointer;
-}
-
 /* #endregion */
 
 /* #region kontakt  */
@@ -229,14 +250,15 @@ nav ul li:hover {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin: auto;
-  width: 50%;
+  width: 80%;
+  gap: 2rem;
 }
 
 #kontakt form {
   display: flex;
   flex-direction: column;
-  background-color: lightgray;
-  width: 80%;
+  background-color: #e3e3e3;
+  width: 100%;
   padding: 2rem;
 }
 
@@ -271,10 +293,8 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: auto;
-  background-color: lightgray;
-  width: auto;
-  margin: 5rem;
+  background-color: #e3e3e3;
+  margin: 2rem 7.75rem;
 }
 
 #socials {
@@ -288,9 +308,10 @@ footer {
 }
 
 #footer-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  display: flex;
   justify-content: space-between;
+  padding-left: 2rem;
+  padding-right: 2rem;
   padding-bottom: 2rem;
   gap: 2rem;
 }

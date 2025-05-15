@@ -11,8 +11,12 @@ let count = 0;
 
 buyBtn.forEach((el) => {
   el.addEventListener('click', () => {
-    count++;
-    cart.innerText = `(${count})`;
+    if (count > 20) {
+      alert('EAAAASY, BIG FELLA, EAAAAAAASY');
+    } else {
+      count++;
+      cart.innerText = `(${count})`;
+    }
   });
 });
 
@@ -77,6 +81,7 @@ function submit(e) {
     alert('Navn er forkert!');
   }
 }
+
 function swap() {
   const images = document.getElementsByClassName('recipeImg');
   const afterImg = document.querySelectorAll('#recipe-grid li figure');
